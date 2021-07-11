@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="app_css.css" rel="app_stylesheet">
+    <style>
+        body{
+        background-color:  rgb(255, 255, 255);   
+        color: rgb(2, 139, 98);
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="female weight">
+        <h1>Female Weight Predition Analysis</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <label for="female_height">FEMALE HEIGHT</label>
+            <input type="number" name="female_height" placeholder="Female Height" autocomplete="off" />
+            
+            <button type="submit" >Predict</button>
+        </form>
+    
+       <br>
+       <h4 style="color: rgb(228, 5, 91);">Your Approximate Weight is {{output1}} To Height {{height1}}  </h4>
+       <h4 style="color: rgb(228, 5, 91);">To Maintain Perfect weight to You height  {{height1}}  Should Maintain Between {{less1}} to {{high1}} </h4>
+       </div>
+<!--Female height prediction-->
+       <div class="login">
+        <h1>Female Height Predition Analysis</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict_fe_ht')}}"method="post">
+            <label for="female_weight">FEMALE WEIGHT</label>
+            <input type="number" name="female_weight" placeholder="Female Weight" autocomplete="off" />
+            
+            <button type="submit" >Predict</button>
+        </form>
+    
+       <br>
+       <h4 style="color: rgb(228, 5, 91);">Your Approximate Height is {{output2}} To Weight {{height2}}  </h4>
+       <h4 style="color: rgb(228, 5, 91);">To Maintain Perfect weight to You height  {{height2}}  Should Maintain Between {{less2}} to {{high2}} </h4>
+       </div>
+<!--Male Weight Prediction-->
+
+       <div class="login">
+        <h1>Male Weight Predition Analysis</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict_ma_wt')}}"method="post">
+            <label for="male_height">MALE HEIGHT</label>
+            <input type="number" name="male_height" placeholder="Male Height" autocomplete="off" />
+            
+            <button type="submit" >Predict</button>
+        </form>
+    
+       <br>
+       <h4 style="color: rgb(228, 5, 91);">Your Approximate Weight is {{output3}} To Height {{height3}}  </h4>
+       <h4 style="color: rgb(228, 5, 91);">To Maintain Perfect weight to You height  {{height3}}  Should Maintain Between {{less3}} to {{high3}} </h4>
+       </div>
+
+       <!--Male Height Prediction-->
+
+       <div class="login">
+        <h1>Male Height Predition Analysis</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict_ma_ht')}}"method="post">
+            <label for="male_weight">MALE WEIGHT</label>
+            <input type="number" name="male_weight" placeholder="Male Weight" autocomplete="off" />
+            
+            <button type="submit" >Predict</button>
+        </form>
+    
+       <br>
+       <h4 style="color: rgb(228, 5, 91);">Your Approximate Height is {{output4}} To Weight {{height4}}  </h4>
+       <h4 style="color: rgb(228, 5, 91);">To Maintain Perfect Height to You Weight  {{height4}}  Should Maintain Between {{less4}} to {{high4}} </h4>
+       </div>
+</body>
+</html>
